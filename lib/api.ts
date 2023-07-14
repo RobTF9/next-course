@@ -1,4 +1,16 @@
-const fetcher = async ({ url, method, body, json = true }) => {
+import { Prisma } from "@prisma/client";
+
+const fetcher = async ({
+  url,
+  method,
+  body,
+  json = true,
+}: {
+  url: string;
+  method: string;
+  body: any;
+  json: boolean;
+}) => {
   const res = await fetch(url, {
     method,
     ...(body && { body: JSON.stringify(body) }),
@@ -18,7 +30,7 @@ const fetcher = async ({ url, method, body, json = true }) => {
   }
 };
 
-export const register = async (user) => {
+export const register = async (user: Prisma.UserCreateInput) => {
   return fetcher({
     url: "/api/register",
     method: "POST",
@@ -27,7 +39,7 @@ export const register = async (user) => {
   });
 };
 
-export const signin = async (user) => {
+export const signin = async (user: Prisma.UserCreateInput) => {
   return fetcher({
     url: "/api/signin",
     method: "POST",

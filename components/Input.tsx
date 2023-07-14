@@ -1,6 +1,7 @@
 import clsx from "clsx";
+import { InputHTMLAttributes } from "react";
 
-interface Props {
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
   className: string;
 }
 
