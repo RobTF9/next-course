@@ -1,3 +1,4 @@
+import AuthForm from "@/components/AuthForm";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,5 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function SignIn() {
-  return <h1>SignIn</h1>;
+  return <AuthForm mode="signin" />;
 }
