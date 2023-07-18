@@ -10,7 +10,7 @@
     "db": "docker run --name postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d --rm postgres:13.0"
   },
   "dependencies": {
-    "@prisma/client": "4.6.1",
+    "@prisma/client": "4.16.1",
     "@types/node": "20.4.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
